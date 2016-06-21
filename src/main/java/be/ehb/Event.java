@@ -5,6 +5,7 @@
  */
 package be.ehb;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
@@ -62,12 +63,14 @@ public class Event implements Serializable {
     @Basic(optional = false)
     @NotNull
     @Column(name = "StartTime")
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd,HH:00", timezone="CET")
     private Date startTime;
     @Basic(optional = false)
     @NotNull
     @Column(name = "EndTime")
     @Temporal(TemporalType.TIMESTAMP)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd,HH:00", timezone="CET")    
     private Date endTime;
     @Basic(optional = false)
     @NotNull
