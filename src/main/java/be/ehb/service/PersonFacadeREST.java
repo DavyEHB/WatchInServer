@@ -34,7 +34,7 @@ import javax.ws.rs.core.Response;
  */
 @Stateless
 
-@Path("person")
+@Path("persons")
 public class PersonFacadeREST extends AbstractFacade<Person> {
     
     @Context  //injected response proxy supporting multiple threads
