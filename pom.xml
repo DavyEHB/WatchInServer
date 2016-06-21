@@ -28,6 +28,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.fasterxml.jackson</groupId>
+            <artifactId>jackson-parent</artifactId>
+            <version>2.6.1</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
@@ -41,13 +47,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Provides ObjectMapper and SerializationConfig -->
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
-            <type>jar</type>
-        </dependency>
+
     </dependencies>
 
     <build>
